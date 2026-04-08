@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Panchang</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#872100",
+                        "on-secondary-fixed": "#2d1600",
+                        "on-secondary-container": "#794c1b",
+                        "error": "#ba1a1a",
+                        "primary-container": "#9f2800",
+                        "on-surface": "#1b1c1c",
+                        "secondary-fixed": "#ffdcbf",
+                        "inverse-primary": "#ffb5a0",
+                        "primary": "#761b00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#ffb8a5",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dbd9d9",
+                        "secondary": "#835422",
+                        "surface-variant": "#e4e2e2",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-bright": "#fbf9f8",
+                        "on-secondary-fixed-variant": "#673d0c",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "tertiary": "#243d68",
+                        "on-surface-variant": "#59413b",
+                        "on-primary-fixed": "#3b0900",
+                        "tertiary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e4e2e2",
+                        "tertiary-fixed-dim": "#afc7fa",
+                        "on-tertiary-fixed-variant": "#2f4672",
+                        "secondary-fixed-dim": "#f8ba7f",
+                        "surface-tint": "#ad320a",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e1bfb6",
+                        "outline": "#8d7169",
+                        "on-tertiary-container": "#b2c9fd",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary-fixed": "#ffdbd1",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#3d5481",
+                        "surface": "#fbf9f8",
+                        "secondary-container": "#fec084",
+                        "on-tertiary-fixed": "#001a41",
+                        "background": "#fbf9f8",
+                        "inverse-surface": "#303030"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Noto Serif', serif; }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface min-h-screen flex flex-col">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
